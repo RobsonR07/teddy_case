@@ -4,6 +4,9 @@ from src.db_engine import create_schema_and_table
 from src.db_insert import insert_dataframe
 
 def main():
+    """
+    Executa o fluxo de extração, filtragem e inserção dos dados.
+    """
     BASE_URL = "https://jsonplaceholder.typicode.com/todos/"
 
     client = APIClient(BASE_URL)

@@ -1,13 +1,18 @@
 from sqlalchemy import create_engine, text
 
 def get_engine():
+
+    """
+    Cria e retorna uma conexão SQLAlchemy com o banco de dados PostgreSQL.
+    """
+
     user = "postgres"
     password = "Password123"
     host = "localhost"
     port = "5432"
     database = "datalake"
 
-    # Utilização do pg8000 para evitar bugs do Windows
+    # Windows 11 bugado com o pyscopg2 e pg8000 funciona
     connection_string = f"postgresql+pg8000://{user}:{password}@{host}:{port}/{database}"
 
     engine = create_engine(
@@ -18,6 +23,10 @@ def get_engine():
     return engine
 
 def create_schema_and_table():
+
+    """
+    Cria o schema 'Teddy_360' e a tabela 'todos' caso ainda não existam no banco de dados.
+    """
 
     sql = """
     CREATE SCHEMA IF NOT EXISTS "Teddy_360";

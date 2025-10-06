@@ -23,8 +23,8 @@ def create_schema_and_table():
     CREATE SCHEMA IF NOT EXISTS "Teddy_360";
 
     CREATE TABLE IF NOT EXISTS "Teddy_360".todos (
-        userId INTEGER NOT NULL,
-        id INTEGER PRIMARY KEY,
+        id SERIAL PRIMARY KEY,
+        user_id INTEGER NOT NULL,   
         title TEXT NOT NULL,
         completed BOOLEAN NOT NULL,
         data_carga TIMESTAMP DEFAULT CURRENT_TIMESTAMP

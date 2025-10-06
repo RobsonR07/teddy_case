@@ -1,6 +1,7 @@
 from src.api_client import APIClient
 from src.data_cleaner import filter_completed_records
 from src.db_engine import create_schema_and_table
+from src.db_insert import insert_dataframe
 
 def main():
     BASE_URL = "https://jsonplaceholder.typicode.com/todos/"
@@ -13,6 +14,9 @@ def main():
         print("Exemplo de registros completos:")
         print(df_filtered.head())
         print(f"Total de registros: {len(df_filtered)}")
+        insert_dataframe(df_filtered)  
+    else:
+        print("Nenhum dado para processar.")
 
 if __name__ == "__main__":
     create_schema_and_table()

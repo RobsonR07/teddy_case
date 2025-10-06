@@ -5,7 +5,6 @@ def insert_dataframe(df: pd.DataFrame):
 
     """
     Insere o DataFrame filtrado na tabela 'Teddy_360.todos' do PostgreSQL.
-    Executa a operação em modo transacional e exibe a quantidade de registros inseridos.
     """
 
     engine = get_engine()

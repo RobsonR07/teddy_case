@@ -36,17 +36,11 @@ teddy_case/
 
 ### 1️⃣ Clonar o repositório
 ```bash
-git clone https://github.com/<seu-usuario>/teddy_case.git
+git clone https://github.com/RobsonR07/teddy_case.git
 cd teddy_case
 ```
 
-### 2️⃣ Criar e ativar o ambiente virtual
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
-
-### 3️⃣ Instalar as dependências
+### 2️⃣ Instalar as dependências
 ```bash
 pip install -r requirements.txt
 ```
@@ -77,23 +71,6 @@ python -m src.main
 | title        | TEXT       | Título ou descrição da tarefa        |
 | completed    | BOOLEAN    | Status da tarefa (True = completa)   |
 | data_carga   | TIMESTAMP  | Data/hora da inserção no banco       |
-
----
-
-## 🧪 Exemplo de saída no console
-
-```
-Tabela 'Teddy_360.todos' criada
-Conectando a URL: https://jsonplaceholder.typicode.com/todos/
-200 registros encontrados.
-Foram removidos 110 registros incompletos.
-Exemplo de registros completos:
-    user_id  id                     title  completed
-3        1   4          et porro tempora       True
-7        1   8  quo adipisci enim quam ut ab       True
-Total de registros: 90
-✅ 90 registros inseridos na tabela Teddy_360.todos.
-```
 
 ---
 

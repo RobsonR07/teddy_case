@@ -3,8 +3,7 @@ import pandas as pd
 def filter_completed_records(df: pd.DataFrame) -> pd.DataFrame:
 
     """
-    Filtra apenas os registros com 'completed=True' no DataFrame.
-    Renomeia a coluna 'userId' para 'user_id' e exibe a quantidade de registros removidos.
+    Filtra apenas os registros com completos no DataFrame.
     """
 
     initial_count = len(df)
